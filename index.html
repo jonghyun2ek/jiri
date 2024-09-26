@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지리학과 사이트</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>지리학과 커뮤니티</h1>
+        <nav>
+            <ul>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">자료실</a></li>
+                <li><a href="#">게시판</a></li>
+                <li><a href="#">프로젝트 공유</a></li>
+                <li><a href="#">강의 평가</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="announcements">
+            <h2>공지사항</h2>
+            <ul id="announcement-list"></ul>
+        </section>
+
+        <section id="resource-upload">
+            <h2>자료 업로드</h2>
+            <form id="upload-form" enctype="multipart/form-data">
+                <input type="text" id="file-description" placeholder="파일 설명" required>
+                <select id="file-category">
+                    <option value="강의자료">강의자료</option>
+                    <option value="참고자료">참고자료</option>
+                    <option value="연구자료">연구자료</option>
+                </select>
+                <input type="file" id="file-input" required>
+                <button type="submit">업로드</button>
+            </form>
+        </section>
+
+        <section id="resource-list">
+            <h2>자료 목록</h2>
+            <select id="category-filter">
+                <option value="all">모든 자료</option>
+                <option value="강의자료">강의자료</option>
+                <option value="참고자료">참고자료</option>
+                <option value="연구자료">연구자료</option>
+            </select>
+            <ul id="file-list"></ul>
+        </section>
+
+        <section id="board">
+            <h2>게시판</h2>
+            <form id="new-post-form">
+                <input type="text" id="post-title" placeholder="제목" required>
+                <textarea id="post-content" placeholder="내용" required></textarea>
+                <label><input type="checkbox" id="anonymous"> 익명으로 작성</label>
+                <button type="submit">게시글 작성</button>
+            </form>
+            <ul id="post-list"></ul>
+        </section>
+
+        <section id="project-share">
+            <h2>프로젝트 공유</h2>
+            <form id="new-project-form">
+                <input type="text" id="project-title" placeholder="프로젝트 제목" required>
+                <textarea id="project-description" placeholder="프로젝트 설명" required></textarea>
+                <button type="submit">프로젝트 등록</button>
+            </form>
+            <ul id="project-list"></ul>
+        </section>
+
+        <section id="evaluation">
+            <h2>강의 평가</h2>
+            <form id="new-evaluation-form">
+                <input type="text" id="lecture-name" placeholder="강의명" required>
+                <input type="number" id="rating" placeholder="별점 (1-5)" min="1" max="5" required>
+                <textarea id="review" placeholder="리뷰" required></textarea>
+                <button type="submit">평가 작성</button>
+            </form>
+            <ul id="evaluation-list"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 건국대학교 지리학과</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
